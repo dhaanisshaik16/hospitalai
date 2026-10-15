@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Hospital Appointment System with Real-Time Availability and Automatic Waiting-List Allocation Engine." />
+  <title>Smart Hospital Appointment System (SHAS)</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-navbar">
+    <div class="navbar-container">
+      <!-- Brand Logo -->
+      <div class="brand-wrapper" onclick="window.SHAS.App.navigateTo('landing')">
+        <div class="brand-logo-icon">✚</div>
+        <div>
+          <span class="brand-title">SmartHospital</span>
+          <span class="brand-badge">PROTOTYPE</span>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-links-menu" id="nav-menu-wrapper">
+        <a href="#landing" class="nav-link active" data-view="landing">Home</a>
+        <a href="#booking" class="nav-link" data-view="booking">Book Appointment</a>
+        <a href="#directory" class="nav-link" data-view="directory">Doctor Directory</a>
+        <a href="#patient" class="nav-link" data-view="patient">Patient Portal</a>
+        <a href="#doctor" class="nav-link" data-view="doctor">Doctor Schedule</a>
+        <a href="#admin" class="nav-link" data-view="admin">Admin Operations</a>
+      </nav>
+
+      <!-- Right Tools & Switchers -->
+      <div class="navbar-right-tools">
+        <!-- Interactive Demo Walkthrough Guide Button -->
+        <button class="btn-tour-pill" id="nav-demo-tour-btn" title="Open the Judge Demonstration Guide">
+          ⭐ Demo Guide
+        </button>
+
+        <!-- Active Demo Role Pill -->
+        <button class="btn-role-switcher" id="btn-active-role-pill" title="Click to switch between Patient, Doctor, or Administrator roles">
+          <span class="role-icon">👤</span> Patient: Sarah Jenkins
+        </button>
+
+        <!-- Notification Bell -->
+        <button class="btn-icon-round" id="nav-bell-btn" aria-label="Notifications" title="In-App Notifications">
+          🔔
+          <span class="notif-badge-count" id="nav-notif-badge" style="display:none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Prototype Notice Bar -->
+  <aside class="prototype-banner" style="background:#f1f5f9; border-bottom:1px solid #e2e8f0; font-size:12px; color:#475569; padding:6px 20px; text-align:center;">
+    <span>⚡ <strong>Frontend Demonstration Prototype:</strong> All data persists purely in browser LocalStorage. No backend or server required. Role switcher enables testing across Patient, Doctor, and Admin viewpoints.</span>
+  </aside>
+
+  <!-- Main Dynamic Application Content Container -->
+  <main class="app-main" id="app-main-content">
+    <!-- Rendered dynamically by window.SHAS.App.renderCurrentView() -->
+  </main>
+
+  <!-- Floating Toast Notifications Container -->
+  <div id="shas-toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Modules in Strict Dependency Order -->
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/seed-data.js"></script>
+  <script src="js/departments.js"></script>
+  <script src="js/doctors.js"></script>
+  <script src="js/availability.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/waitlist.js"></script>
+  <script src="js/appointments.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

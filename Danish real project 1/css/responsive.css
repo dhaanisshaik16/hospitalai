@@ -1,0 +1,263 @@
+/**
+ * Smart Hospital Appointment System (SHAS) - Responsive Stylesheet
+ * Breakpoints for tablets, mobile handsets, responsive navigation drawer,
+ * horizontal table scrolling, and touch target accessibility.
+ */
+
+/* ==========================================================================
+   TABLET BREAKPOINT (max-width: 1024px)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .dashboard-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .header-action-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .weekly-pills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waitlist-innovation-banner {
+    padding: 32px 28px;
+  }
+
+  .offer-urgent-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .offer-action-buttons {
+    width: 100%;
+  }
+
+  .hero-trust-metrics {
+    gap: 24px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE BREAKPOINT (max-width: 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    border-bottom: 1px solid var(--slate-200);
+    box-shadow: var(--shadow-lg);
+    display: none;
+    z-index: 99;
+  }
+
+  .nav-links-menu.active {
+    display: flex;
+  }
+
+  .btn-tour-pill {
+    display: none; /* Hide tour pill in navbar on small screens to save space */
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .app-main {
+    padding: 16px 12px 48px;
+  }
+
+  /* Hero Section */
+  .landing-hero {
+    padding: 40px 0 50px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .landing-search-select {
+    border-left: none;
+    border-top: 1px solid var(--slate-200);
+    padding: 10px 0;
+  }
+
+  .hero-trust-metrics {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  /* Forms & Grids */
+  .form-row-two, .form-row-three {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .next-apt-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .schedule-snippet {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .time-block {
+    text-align: left;
+  }
+
+  .weekly-pills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wizard-card-container {
+    padding: 20px 16px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .success-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .success-actions-row {
+    flex-direction: column;
+  }
+
+  .success-actions-row .btn {
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .notification-dropdown-panel {
+    width: calc(100vw - 32px);
+    right: 16px;
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: 100%;
+  }
+
+  .modal-dialog {
+    max-width: 100%;
+    margin: 10px;
+    border-radius: var(--radius-lg);
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-header, .modal-footer {
+    padding: 14px 16px;
+  }
+}
+
+/* ==========================================================================
+   EXTRA SMALL SCREENS (max-width: 480px)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-pills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slots-picker-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .brand-badge {
+    display: none;
+  }
+}
